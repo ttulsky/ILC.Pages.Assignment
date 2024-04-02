@@ -13,4 +13,4 @@
   - At runtime add the DataTables table library
   - Attach/bind/link the JSON data into DataTable
   - Render the DataTable
-  - Bonus points: format tax rate as percentage, price & tax as currency, and dates with mm/dd/yyyy format.
+- Bonus points: format tax rate as percentage, price & tax as currency, and dates with mm/dd/yyyy format.
