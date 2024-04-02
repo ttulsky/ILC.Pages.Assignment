@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.5.1.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"
+    ></script>
+  </head>
+  <body>
+    <div id="results"></div>
+    <script id="data" type="application/json">
+      [
+        {
+          "so_num": "1000",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "Call front desk to confirm order",
+          "shipto_name": "Allen's Groceries",
+          "so_taxrate": 0,
+          "so_totalprice": 15936.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1001",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "Only sending 16lbs flour and closing short, confirmed w/ Peggy in their A/P office",
+          "shipto_name": "Mark Bennett",
+          "so_taxrate": 0,
+          "so_totalprice": 520.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1002",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Eric Washburn",
+          "so_taxrate": 0,
+          "so_totalprice": 2800.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1003",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Karen Smith",
+          "so_taxrate": 0,
+          "so_totalprice": 24.9,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1004",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Eric Washburn",
+          "so_taxrate": 0,
+          "so_totalprice": 1017.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1005",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Mark Bennett",
+          "so_taxrate": 0,
+          "so_totalprice": 397.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1007",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Patricia Beverages",
+          "so_taxrate": 0,
+          "so_totalprice": 66.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1009",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Jim's Bake Shop",
+          "so_taxrate": 0.0625,
+          "so_totalprice": 5.31,
+          "so_totaltax": 0.31
+        },
+        {
+          "so_num": "1009-return",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "Created from RMA #1009-RMA",
+          "shipto_name": "Jim's Bake Shop",
+          "so_taxrate": 0.0625,
+          "so_totalprice": -5.31,
+          "so_totaltax": -0.31
+        },
+        {
+          "so_num": "1011",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Candie Walker",
+          "so_taxrate": 0,
+          "so_totalprice": 3402.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1012",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Patricia Beverages",
+          "so_taxrate": 0,
+          "so_totalprice": 180.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1013",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Mountaineer Catering",
+          "so_taxrate": 0,
+          "so_totalprice": 250.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1014",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Karen Smith",
+          "so_taxrate": 0,
+          "so_totalprice": 17.5,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1015",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Jim Raynor",
+          "so_taxrate": 0.0625,
+          "so_totalprice": 95.63,
+          "so_totaltax": 5.63
+        },
+        {
+          "so_num": "1016",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Baker Frontier",
+          "so_taxrate": 0,
+          "so_totalprice": 59.25,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1017",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Allen's Groceries",
+          "so_taxrate": 0,
+          "so_totalprice": 165.3,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1018",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Jim's Bake Shop 2",
+          "so_taxrate": 0.0625,
+          "so_totalprice": 1115.63,
+          "so_totaltax": 65.63
+        },
+        {
+          "so_num": "1019",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Jim's Bake Shop 2",
+          "so_taxrate": 0.0625,
+          "so_totalprice": 124.95,
+          "so_totaltax": 7.35
+        },
+        {
+          "so_num": "1020",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Patricia Beverages",
+          "so_taxrate": 0,
+          "so_totalprice": 32.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1021",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Mark Bennett",
+          "so_taxrate": 0,
+          "so_totalprice": 397.5,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1022",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Mountaineer Catering",
+          "so_taxrate": 0,
+          "so_totalprice": 128.35,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1023",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "Wedding event, be early",
+          "shipto_name": "Mountaineer Catering",
+          "so_taxrate": 0,
+          "so_totalprice": 180.96,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1024",
+          "so_datecreated": "2024-02-03 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Allen's Groceries",
+          "so_taxrate": 0,
+          "so_totalprice": 30.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1026",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Candie Walker",
+          "so_taxrate": 0,
+          "so_totalprice": 97.5,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1027",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Eric Washburn",
+          "so_taxrate": 0,
+          "so_totalprice": 28.25,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1028",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Patricia Beverages",
+          "so_taxrate": 0,
+          "so_totalprice": 83.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1029",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Baker Frontier",
+          "so_taxrate": 0,
+          "so_totalprice": 126.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1030",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Candie Walker",
+          "so_taxrate": 0,
+          "so_totalprice": 194.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1031",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Mark Bennett",
+          "so_taxrate": 0,
+          "so_totalprice": 16.75,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1033",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Baker Frontier",
+          "so_taxrate": 0,
+          "so_totalprice": 101.89,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1034",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Mountaineer Catering",
+          "so_taxrate": 0,
+          "so_totalprice": 17.89,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1035",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Baker Frontier",
+          "so_taxrate": 0,
+          "so_totalprice": 21.39,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1037",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Candie Walker",
+          "so_taxrate": 0,
+          "so_totalprice": 97.5,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1038",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Karen Smith",
+          "so_taxrate": 0,
+          "so_totalprice": 8.89,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1039",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Candie Walker",
+          "so_taxrate": 0,
+          "so_totalprice": 216.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1040",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Allen's Groceries",
+          "so_taxrate": 0,
+          "so_totalprice": 1510.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1041",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Eric Washburn",
+          "so_taxrate": 0,
+          "so_totalprice": 5.44,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1042",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Eric Washburn",
+          "so_taxrate": 0,
+          "so_totalprice": 5.44,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1043",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Mark Bennett",
+          "so_taxrate": 0,
+          "so_totalprice": 28.9,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1044",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Mark Bennett",
+          "so_taxrate": 0,
+          "so_totalprice": 28.9,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1045",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Baker Frontier",
+          "so_taxrate": 0,
+          "so_totalprice": 170.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1046",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Jim Raynor",
+          "so_taxrate": 0.0625,
+          "so_totalprice": 34.0,
+          "so_totaltax": 2.0
+        },
+        {
+          "so_num": "1048",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Jim's Bake Shop",
+          "so_taxrate": 0.0625,
+          "so_totalprice": 32.41,
+          "so_totaltax": 1.91
+        },
+        {
+          "so_num": "1049",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Candie Walker",
+          "so_taxrate": 0,
+          "so_totalprice": 77.89,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1050",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Mountaineer Catering",
+          "so_taxrate": 0,
+          "so_totalprice": 65.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1051",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Mountaineer Catering",
+          "so_taxrate": 0,
+          "so_totalprice": 60.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1052",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Karen Smith",
+          "so_taxrate": 0,
+          "so_totalprice": 6.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1053",
+          "so_datecreated": "2024-02-08 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Mark Bennett",
+          "so_taxrate": 0,
+          "so_totalprice": 67.9,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1054",
+          "so_datecreated": "2024-03-09 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Jim's Bake Shop",
+          "so_taxrate": 0.0625,
+          "so_totalprice": 185.94,
+          "so_totaltax": 10.94
+        },
+        {
+          "so_num": "1055",
+          "so_datecreated": "2024-03-09 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Baker Frontier",
+          "so_taxrate": 0,
+          "so_totalprice": -85.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1056",
+          "so_datecreated": "2024-03-09 04:47:42.000000",
+          "so_note": "",
+          "shipto_name": "Mark Bennett",
+          "so_taxrate": 0,
+          "so_totalprice": 397.0,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "1057",
+          "so_datecreated": "2024-03-25 03:06:16.781000",
+          "so_note": "Created from RMA #2",
+          "shipto_name": "Allen's Groceries",
+          "so_taxrate": 0,
+          "so_totalprice": -2.5,
+          "so_totaltax": 0.0
+        },
+        {
+          "so_num": "#1001",
+          "so_datecreated": "2024-03-30 00:00:00.000000",
+          "so_note": "",
+          "shipto_name": "Karine Ruby",
+          "so_taxrate": 0,
+          "so_totalprice": 1383.91,
+          "so_totaltax": 0.0
+        }
+      ]
+    </script>
+    <script>
+      $(document).ready(function () {
+        // Parse the JSON data
+        var data = JSON.parse(document.getElementById("data").textContent);
+
+        // Dynamically create a table and append it to the 'results' div
+        var table = $(
+          '<table id="example" class="display" width="100%"></table>'
+        );
+        $("#results").append(table);
+
+        // Initialize DataTable
+        $("#example").DataTable({
+          data: data,
+          columns: [
+            { title: "Order Number", data: "so_num" },
+            {
+              title: "Date Created",
+              data: "so_datecreated",
+              render: function (data, type, row) {
+                var date = new Date(data);
+                return date.toLocaleDateString("en-US"); // Formats date as mm/dd/yyyy
+              },
+            },
+            { title: "Note", data: "so_note" },
+            { title: "Ship To", data: "shipto_name" },
+            {
+              title: "Tax Rate",
+              data: "so_taxrate",
+              render: function (data, type, row) {
+                return (data * 100).toFixed(2) + "%"; // Formats tax rate as percentage
+              },
+            },
+            {
+              title: "Total Price",
+              data: "so_totalprice",
+              render: $.fn.dataTable.render.number(",", ".", 2, "$"),
+            },
+            {
+              title: "Total Tax",
+              data: "so_totaltax",
+              render: $.fn.dataTable.render.number(",", ".", 2, "$"),
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
