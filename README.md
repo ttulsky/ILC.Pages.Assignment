@@ -4,8 +4,8 @@
 
 1. Fork this project to your own github account/repo.
 2. Make changes to the PageAssignment.html page per the requested specifications.
-3. Submit a pull request so I can review what you sent.
-4. Email us on indeed that the assignment is done.
+3. Submit a pull request of your changes.
+4. Email Israel that the assignment is done and ready to review on GitHub.
 
 ## Requested Specifications.
 - Write javascript that will on document ready:
