@@ -10,7 +10,7 @@
 ## Requested Specifications.
 - Write javascript that will on document ready:
   - Parse the data JSON provided in the HTML page
-  - At runtime add the DataTables table library
+  - At runtime add the DataTables table element
   - Attach/bind/link the JSON data into DataTable
   - Render the DataTable
 - Bonus points: format tax rate as percentage, price & tax as currency, and dates with mm/dd/yyyy format.
